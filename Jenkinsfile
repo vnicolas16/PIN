@@ -27,7 +27,7 @@ pipeline {
       steps{
         sh '''
         docker login --username=$DOCKER_HUB_LOGIN_USR --password=$DOCKER_HUB_LOGIN_PSW
-        docker tag testapp $REGISTRY/testapp
+        docker tag testapp $REGISTRY/testapp:v1
         docker push $REGISTRY/testapp:v1   
         '''
         }
